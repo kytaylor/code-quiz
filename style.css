@@ -1,14 +1,20 @@
 * {
     font-family: sans-serif;
+    color: white;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(131,58,180,1) 5%, rgba(253,29,29,1) 25%, rgba(252,176,69,1) 50%, rgba(253,29,29,1) 75%, rgba(131,58,180,1) 95%);
 }
 
 .timer {
     float: right;
-    background-color: rgba(131,58,180,1);
-    color: white;
+    background-color: white;
+    color: rgba(131,58,180,1);
     margin: 4px 2px;
     padding: 15px 32px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 #start-menu {
@@ -23,24 +29,54 @@ section {
 }
 
 .button {
-    border: 5px solid rgba(131,58,180,1);
-    background-color: rgba(131,58,180,1);
-    color: white;
+    border: 5px solid white;
+    color: rgba(131,58,180,1);
+    background-color: white;
     margin: 4px 2px;
     padding: 10px 27px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    border: 5px solid rgb(184, 118, 245);
+    border: 5px solid white;
+    color: white;
+    background-color: rgba(131,58,180,1);
 }
 
 .question {
     text-align: center;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+#score-screen {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+    color: black;
+}
+
+form button {
+    color: rgba(131,58,180,1);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: white;
+    background-color: rgba(131,58,180,1);
 }

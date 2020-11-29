@@ -20,58 +20,73 @@
         <button class="start-button button">Start</button>
     </div>
 
+
     <div id="question-one" class="question">
         <h2>Which of the following is NOT a commonly used data type?</h2>
 
-        <button id="q1-button" class="q1-button button">Arrays</button>
-        <button id="correct-q1" class="correct-q1-button button">Alerts</button>
-        <button id="q1-button1" class="q1-button button">Numbers</button>
-        <button id="q1-button2" class="q1-button button">Strings</button>
+        <button class="q1-button button">Arrays</button>
+        <button class="correct-q1 button">Alerts</button>
+        <button class="q1-button button">Numbers</button>
+        <button class="q1-button button">Strings</button>
     </div>
 
     <div id="question-two" class="question">
         <h2>How do you make a comment in javascript?</h2>
 
-        <button id="q1-button" class="q2a1-button button">&lt;!-- --&gt;</button>
-        <button id="q1-button" class="q2a2-button button">/* */</button>
-        <button id="q1-button" class="q2a3-button button">::</button>
-        <button id="correct-q1" class="correct q2a4-button button">//</button>
+        <button class="q1-button button">&lt;!-- --&gt;</button>
+        <button class="q1-button button">/* */</button>
+        <button class="q1-button button">::</button>
+        <button class="correct-q1 button">//</button>
     </div>
 
     <div id="question-three" class="question">
         <h2>How do you show a message in an Alert box?</h2>
 
-        <button id="correct-q1" class="correct q3a1-button button">alert("This is an alert.")</button>
-        <button id="q1-button" class="q3a2-button button">console.log(This is an alert.)</button>
-        <button id="q1-button" class="q3a3-button button">alertbox("This is an alert.")</button>
-        <button id="q1-button" class="q3a4-button button">confirm("This is an alert.")</button>
+        <button class="correct-q1 button">alert("This is an alert.")</button>
+        <button class="q1-button button">console.log(This is an alert.)</button>
+        <button class="q1-button button">alertbox("This is an alert.")</button>
+        <button class="q1-button button">confirm("This is an alert.")</button>
     </div>
 
     <div id="question-four" class="question">
         <h2>To make a string, what must enclose the value?</h2>
 
-        <button id="q1-button" class="q4a1-button button">Tildes</button>
-        <button id="q1-button" class="q4a2-button button">Curly brackets</button>
-        <button id="correct-q1" class="correct q4a3-button button">Quotation marks</button>
-        <button id="q1-button" class="q4a4-button button">Parentheses</button>
+        <button class="q1-button button">Tildes</button>
+        <button class="q1-button button">Curly brackets</button>
+        <button class="correct-q1 button">Quotation marks</button>
+        <button class="q1-button button">Parentheses</button>
     </div>
 
     <div id="question-five" class="question">
         <h2>What tag do you use in an HTML document to link it to a javascript document?</h2>
 
-        <button id="q1-button" class="q5a1-button button">&lt;javascript&gt;</button>
-        <button id="correct-q1" class="correct q5a2-button button">&lt;script&gt;</button>
-        <button id="q1-button" class="q5a3-button button">&lt;link&gt;</button>
-        <button id="q1-button" class="q5a4-button button">&lt;js&gt;</button>
+        <button class="q1-button button">&lt;javascript&gt;</button>
+        <button class="correct-q1 button">&lt;script&gt;</button>
+        <button class="q1-button button">&lt;link&gt;</button>
+        <button class="q1-button button">&lt;js&gt;</button>
     </div>
 
     <div id="question-six" class="question">
         <h2>What do you use to check if two variables have the same value AND data type?</h2>
 
-        <button id="q1-button" class="q6a1-button button">=</button>
-        <button id="q1-button" class="q6a2-button button">==</button>
-        <button id="correct-q1" class="correct q6a3-button button">===</button>
-        <button id="q1-button" class="q6a4-button button">!=</button>
+        <button class="q1-button button">=</button>
+        <button class="q1-button button">==</button>
+        <button class="correct-q1 button">===</button>
+        <button class="q1-button button">!=</button>
+    </div>
+
+    <div id="score-screen">
+        <h1>Quiz complete!</h1>
+
+        <p>Your final score is:<span class="final-score"></span></p>
+
+        <p>Enter your name:</p>
+
+        <form>
+            <input type="text" class="name">
+            
+            <button class="submit-button" type="submit">+</button>
+        </form>
     </div>
 
     <div id="correct" class="question">
