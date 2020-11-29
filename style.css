@@ -38,3 +38,9 @@ section {
 .button:hover {
     border: 5px solid rgb(184, 118, 245);
 }
+
+.question {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
