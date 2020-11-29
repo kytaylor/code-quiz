@@ -13,13 +13,13 @@
 
 #start-menu {
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 section {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .button {
@@ -41,6 +41,6 @@ section {
 
 .question {
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
