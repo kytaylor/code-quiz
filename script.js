@@ -20,6 +20,7 @@ var correct = document.getElementById("correct");
 var incorrect = document.getElementById("incorrect");
 
 var scoreScreen = document.getElementById("score-screen");
+var finalScore = document.getElementById("final-score");
 
 var timer = document.querySelector(".time");
 var secondsLeft = 60;
@@ -49,15 +50,17 @@ function startQuiz(event) {
     
         if (secondsLeft === 0) {
           clearInterval(timerInterval);
-          qOne.hidden = true;
-          qTwo.hidden = true;
-          qThree.hidden = true;
-          qFour.hidden = true;
-          qFive.hidden = true;
-          qSix.hidden = true;
-          scoreScreen.hidden = false;
+            qOne.hidden = true;
+            qTwo.hidden = true;
+            qThree.hidden = true;
+            qFour.hidden = true;
+            qFive.hidden = true;
+            qSix.hidden = true;
+            scoreScreen.hidden = false;
         } else if (scoreScreen.hidden == false) {
             clearInterval(timerInterval);
+            finalScore.textContent = secondsLeft
+            return secondsLeft;
         }
         secondsLeft--;
     } ,1000)
