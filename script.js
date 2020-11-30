@@ -44,6 +44,24 @@ var questions = [qOne, qTwo, qThree, qFour, qFive, qSix];
 function startQuiz(event) {
     event.preventDefault();
 
+    var timerInterval = setInterval(function() {
+        timer.textContent = secondsLeft;
+    
+        if (secondsLeft === 0) {
+          clearInterval(timerInterval);
+          qOne.hidden = true;
+          qTwo.hidden = true;
+          qThree.hidden = true;
+          qFour.hidden = true;
+          qFive.hidden = true;
+          qSix.hidden = true;
+          scoreScreen.hidden = false;
+        } else if (scoreScreen.hidden == false) {
+            clearInterval(timerInterval);
+        }
+        secondsLeft--;
+    } ,1000)
+
     menu.hidden = true;
     qOne.hidden = false;
 
@@ -92,6 +110,8 @@ function startQuiz(event) {
 
     function incorrectAnswer(event) {
         event.preventDefault();
+
+        secondsLeft -= 10;
 
         if(qOne.hidden == false) {
             qOne.hidden = true;

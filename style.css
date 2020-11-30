@@ -17,6 +17,10 @@ body {
     font-weight: bold;
 }
 
+.time {
+    color: rgba(131,58,180,1);
+}
+
 #start-menu {
     text-align: center;
     margin-left: 20%;
