@@ -25,9 +25,6 @@ var finalScore = document.getElementById("final-score");
 var timer = document.querySelector(".time");
 var secondsLeft = 60;
 
-// Scoreboard variables
-var scoreList = document.getElementById("scores");
-
 // Makes questions, score screen, and correct/incorrect start out not visible
 qOne.hidden = true;
 qTwo.hidden = true;
@@ -163,19 +160,42 @@ function startQuiz() {
   }
 }
 
+// Function that takes the entered name and final score and adds to local storage
 function scoreSubmit(event) {
   event.preventDefault();
 
+  //var allScores = ["words", "to", "test", "shit"];
+  var allScores = JSON.parse(localStorage.getItem("score-final")) || [];
+  console.log(allScores)
+
   var name = document.querySelector("#name-input").value;
   var lastScore = finalScore.textContent;
+  var fullScore = name + " - - - " + lastScore;
 
   if (name === "") {
     alert("Please enter your name!");
     return;
   }
 
-  localStorage.setItem("score-name", name);
-  localStorage.setItem("score-final", lastScore);
-  // window.location.href='/'
-  // renderFinalScore();
+  allScores.push(fullScore);
+
+  localStorage.setItem("score-final", JSON.stringify(allScores));
+  window.location.href='file:///C:/Users/mocha/code/code-quiz/scoreboard.html'
+
+  // Retreives local stroage 
+  var storedScores = localStorage.getItem("score-final");
+  storedScores = JSON.parse(storedScores);
+  console.log(storedScores)
+  console.log(storedScores.length)
+
+  if (storedScores !== null) {
+    scoreList.innerHTML = "";
+      for (var i = 0; i < storedScores.length; i++) {
+
+          var newScoreItem = document.createElement("li");
+          newScoreItem.innerText = storedScores[i];
+          scoreList.appendChild(newScoreItem);
+
+      }
+  }
 }
