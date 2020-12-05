@@ -164,7 +164,6 @@ function startQuiz() {
 function scoreSubmit(event) {
   event.preventDefault();
 
-  //var allScores = ["words", "to", "test", "shit"];
   var allScores = JSON.parse(localStorage.getItem("score-final")) || [];
   console.log(allScores)
 
